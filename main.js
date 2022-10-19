@@ -4,7 +4,8 @@ function MakeThePrice(){
     let Age = document.getElementById('HowOld').value;
     console.log(Age)
     
-    let priceKm = 0.21 * Km
+    let priceKm = 0.21 * Km 
+    
     console.log(priceKm)
     if(Age < 18){
         let discount = priceKm * 0.2
@@ -15,6 +16,8 @@ function MakeThePrice(){
         priceKm = priceKm - discount 
     }
     console.log(priceKm)
+
+    priceKm = priceKm.toFixed(2);
 
     document.getElementById('Price').innerHTML = `Il prezzo è : ${priceKm} euro`
 } 
